@@ -78,3 +78,39 @@ padding:9px 0
     border-radius:50px;
     font-weight:bold;
 }
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 12px;
+    background-color: #1f1f76;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.project-image,
+.project-info {
+    flex: 1;
+    margin:45px 0;
+}
+
+.project-image img {
+    width: 100%;
+    display: block;
+    border-radius: 600px;
+    padding:69px 0;
+}
+
+.project-info {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.row-reverse .project-info {
+    text-align: left;
+}
