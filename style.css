@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: roboto;
+}
+
+nav{
+    display:flex;
+    justify-content:space-around;
+    background-image:linear-gradient(to right,#1f1f76,rgb(92, 109, 171));
+    /* background-color:rgb(97, 15, 222); */
+    color:white;
+    padding:10px 0;
+}
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    font-family: "Playwrite AU NSW", cursive;
+}
+
+nav ul {
+    display:flex;
+    gap:17px;
+    align-items:center;
+
+}
+nav ul li {
+    list-style-type:none;
+    font-size:23px;
+    font-family:"roboto",sans-serif;
+    
+}
+.hero{
+    height:55vh;
+    display:flex;
+    justify-content: center;
+    gap:130px;
+    align-items:center;
+    font-family:"roboto",sans-serif;
+}
+
+.hero-left .one {
+    font-size: 60px;
+    color:#1f1f76; 
+    font-weight:bold;
+}
+.hero-left .two {
+    font-size: 40px;
+    
+}
+.bold{
+    font-weight:bold
+}
+img{
+width:450px;
+height:350px
+}
+
+.hero-right img{
+    border-radius:14%;
+}
+.btn-container{
+padding:9px 0
+
+}
+
+
+.btn{
+    
+    background-color:#1f1f76;
+    color:white;
+    padding:7px 9px;
+    width:20%;
+    border:2px solid white;
+    cursor:pointer;
+    align-items:center;
+    font-size:18px;
+    border-radius:50px;
+    font-weight:bold;
+}
