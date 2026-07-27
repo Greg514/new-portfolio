@@ -1,111 +1,149 @@
-*{
-    margin:0;
-    padding:0;
-    font-family: roboto;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
-nav{
-    display:flex;
-    justify-content:space-around;
-    background-image:linear-gradient(to right,#1f1f76,rgb(92, 109, 171));
-    /* background-color:rgb(97, 15, 222); */
-    color:white;
-    padding:10px 0;
+/* NAVBAR */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to right, #1f1f76, rgb(92, 109, 171));
+    color: white;
+    padding: 10px 0;
 }
-.logo{
-    font-size:25px;
-    font-weight:bold;
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
     font-family: "Playwrite AU NSW", cursive;
 }
 
 nav ul {
-    display:flex;
-    gap:17px;
-    align-items:center;
+    display: flex;
+    gap: 17px;
+    align-items: center;
+}
 
-}
 nav ul li {
-    list-style-type:none;
-    font-size:23px;
-    font-family:"roboto",sans-serif;
-    
+    list-style-type: none;
+    font-size: 23px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
 }
-.hero{
-    height:55vh;
-    display:flex;
+
+
+/* HERO SECTION */
+
+.hero {
+    height: 55vh;
+    display: flex;
     justify-content: center;
-    gap:130px;
-    align-items:center;
-    font-family:"roboto",sans-serif;
+    align-items: center;
+    gap: 130px;
+    font-family: "Roboto", sans-serif;
 }
 
 .hero-left .one {
     font-size: 60px;
-    color:#1f1f76; 
-    font-weight:bold;
+    color: #1f1f76;
+    font-weight: bold;
 }
+
 .hero-left .two {
     font-size: 40px;
-    
-}
-.bold{
-    font-weight:bold
-}
-img{
-width:450px;
-height:350px
 }
 
-.hero-right img{
-    border-radius:14%;
+.bold {
+    font-weight: bold;
 }
-.btn-container{
-padding:9px 0
 
+.hero-right img {
+    width: 450px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 14%;
 }
 
 
-.btn{
-    
-    background-color:#1f1f76;
-    color:white;
-    padding:7px 9px;
-    width:20%;
-    border:2px solid white;
-    cursor:pointer;
-    align-items:center;
-    font-size:18px;
-    border-radius:50px;
-    font-weight:bold;
+/* BUTTONS */
+
+.btn-container {
+    padding: 20px 0;
 }
+
+.btn {
+    background-color: #1f1f76;
+    color: white;
+    padding: 10px 25px;
+    border: 2px solid white;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #1f1f76;
+    border: 2px solid #1f1f76;
+}
+
+
+/* PROJECT SECTION */
 
 .project {
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 12px;
+    padding: 12px 40px;
     background-color: #1f1f76;
     color: white;
     font-family: "Roboto", sans-serif;
 }
 
+
 .project-image,
 .project-info {
     flex: 1;
-    margin:45px 0;
+    margin: 45px 0;
 }
 
+
+/* PROJECT IMAGE CIRCLE */
+
 .project-image img {
-    width: 100%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
     display: block;
-    border-radius: 600px;
-    padding:69px 0;
+    border-radius: 50%;
+    margin: auto;
 }
+
+
+/* PROJECT TEXT */
 
 .project-info {
     font-size: 27px;
     font-weight: bold;
 }
+
+.project-info p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+
+/* REVERSE PROJECT LAYOUT */
 
 .row-reverse {
     flex-direction: row-reverse;
@@ -113,4 +151,75 @@ padding:9px 0
 
 .row-reverse .project-info {
     text-align: left;
+}
+
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media(max-width:768px) {
+
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+    }
+
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 50px 20px;
+        gap: 40px;
+        text-align: center;
+    }
+
+
+    .hero-left .one {
+        font-size: 40px;
+    }
+
+
+    .hero-left .two {
+        font-size: 28px;
+    }
+
+
+    .hero-right img {
+        width: 300px;
+        height: 250px;
+    }
+
+
+    .project {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+
+    .row-reverse {
+        flex-direction: column;
+    }
+
+
+    .project-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    .project-info {
+        font-size: 22px;
+    }
+
+
+    .btn {
+        width: auto;
+    }
+
 }
